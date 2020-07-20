@@ -1,0 +1,2 @@
+F:\CODES\QtDesign\;
+D:\dmd2\windows\bin\;D:\dmd2\dm\bin;
