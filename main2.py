@@ -5,11 +5,20 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
                            QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter,
                            QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
+from teste2 import Ui_MainWindow
+import sys
 
 
-class MainWindow(PySide2.QtWidgets.QMainWindow, Ui_MainWindow)
+class MainWindow(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+        self.show()
 
 
-def __init__(self):
-    super(MainWindow, self).__init__()
-    self.setupUi(self)
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    sys.exit(app.exec_())
